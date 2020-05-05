@@ -9,7 +9,7 @@
         
         <div class="other_than_border_right"></div>
         <div class="top_objective company_key_result">
-            <ul class="okr_set">
+            <ul class="okr_set" id="start">
             @foreach($okrs as $okr)
             @if($okr->id == $id)
                 <li>
