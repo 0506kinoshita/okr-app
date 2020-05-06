@@ -9,6 +9,7 @@
     {{ csrf_field() }}
     <p>OBJECTIVE</p><input type="text" name="objective" style="width:500px; height:60px; font-size: 100%;">
     <p>KEY_RESULT</p><input type="text" name="key_result" style="width:500px; height:60px; font-size: 100%;">
+    <input type="text" style="display:none;" name="class_number" value=1>
     <input type="submit" value="OKRを設定" class="button add_okr_btn">
 </form>
 

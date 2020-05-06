@@ -94,37 +94,22 @@
 /***/ (function(module, exports) {
 
 
-  var moji = "end";
-  var tmp = document.getElementsByClassName("leaderline");
+  let moji = "end";
+  let tmp = document.getElementsByClassName("leaderline");
 
-  for (var i = 0; i <= tmp.length - 1; i++) {
+  for (let i = 0; i <= tmp.length - 1; i++) {
     //id追加
     tmp[i].setAttribute("id", moji + i);
+
+    let line = new LeaderLine(
+      document.getElementById('start'),
+      document.getElementById('end'+i),
+    );
+
+    line.setOptions({startSocket: 'bottom', endSocket: 'top'});
+
   }
 
-  new LeaderLine(
-    document.getElementById('start'),
-    document.getElementById('end0'),
-    {
-      color: 'lime'
-    }
-  );
-  
-  new LeaderLine(
-    document.getElementById('start'),
-    document.getElementById('end1'),
-    {
-      color: 'red'
-    }
-  );
-
-  new LeaderLine(
-    document.getElementById('start'),
-    document.getElementById('end2'),
-    {
-      color: 'red'
-    }
-  );
 
 /***/ }),
 
