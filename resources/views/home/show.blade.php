@@ -40,7 +40,7 @@
             <ul class="flex">
                 @foreach($okrs as $okr)
                 @if($okr->parent_id == $id)
-                <li class="okr_set">
+                <li class="okr_set leaderline">
                     <p class="content second_content">{{ $okr->objective }}</p>
                     <p class="content second_content">{{ $okr->key_result }}</p>
                     <div class="flex add_okr_son">
@@ -68,7 +68,7 @@
                 @empty($parent)
                 @else
                     @if($okr->parent_id == $parent)
-                    <li class="okr_set">
+                    <li class="okr_set leaderline">
                         <p class="content third_content">{{ $okr->objective }}</p>
                         <p class="content third_content">{{ $okr->key_result }}</p>
                         <div class="flex add_okr_son">

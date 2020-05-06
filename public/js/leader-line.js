@@ -95,13 +95,36 @@
 
 
   var moji = "end";
-  var tmp = document.getElementsByClassName("okr_set");
+  var tmp = document.getElementsByClassName("leaderline");
 
   for (var i = 0; i <= tmp.length - 1; i++) {
     //id追加
     tmp[i].setAttribute("id", moji + i);
   }
 
+  new LeaderLine(
+    document.getElementById('start'),
+    document.getElementById('end0'),
+    {
+      color: 'lime'
+    }
+  );
+  
+  new LeaderLine(
+    document.getElementById('start'),
+    document.getElementById('end1'),
+    {
+      color: 'red'
+    }
+  );
+
+  new LeaderLine(
+    document.getElementById('start'),
+    document.getElementById('end2'),
+    {
+      color: 'red'
+    }
+  );
 
 /***/ }),
 
