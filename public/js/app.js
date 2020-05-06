@@ -49780,6 +49780,8 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
+__webpack_require__(/*! ./leader-line */ "./resources/js/leader-line.js");
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -49917,6 +49919,26 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/leader-line.js":
+/*!*************************************!*\
+  !*** ./resources/js/leader-line.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  // jsのコード
+  var moji = "end";
+  var tmp = document.getElementsByClassName("okr_set");
+
+  for (var i = 0; i <= tmp.length - 1; i++) {
+    //id追加
+    tmp[i].setAttribute("id", moji + i);
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -49935,8 +49957,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/kinoshita/Desktop/okr-app/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/kinoshita/Desktop/okr-app/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/kinoshitahiroshitaka/Desktop/okr-app/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/kinoshitahiroshitaka/Desktop/okr-app/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

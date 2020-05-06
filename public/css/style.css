@@ -6,6 +6,7 @@
     margin: 36px auto;
     width: 200px;
     text-align: center;
+    font-size: 16px;
 }
 .section_wrap{
     display:flex;
@@ -44,6 +45,7 @@
     width:100%;
 }
 .flex{
+    font-size: 0;
     width:100%;
     display: flex;
     justify-content: space-between;
