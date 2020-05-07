@@ -14,6 +14,7 @@
     @foreach($okrs as $okr)
     @if($id==$okr->id)
     <input type="text" style="display:none;" name="class_number" value={{$okr->class_number + 1}}>
+    <input type="text" style="display:none;" name="parent_master_id" value={{$okr->parent_id}}>
     @endif
     @endforeach
     <input type="submit" value="追加する" class="button add_okr_btn">

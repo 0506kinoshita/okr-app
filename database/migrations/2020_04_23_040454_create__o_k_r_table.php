@@ -19,11 +19,12 @@ class CreateOKRTable extends Migration
             $table->string('key_result');
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->unsignedBigInteger('class_number');
+            $table->unsignedBigInteger('parent_master_id')->nullable();
             $table->boolean('master_flag')->default(1);
             $table->timestamps();
         });
     }
-
+ 
     /**
      * Reverse the migrations.
      *
