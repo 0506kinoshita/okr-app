@@ -19,6 +19,7 @@ class _O_k_r_TableSeeder extends Seeder
             'parent_id' => null,
             'master_flag' => true,
             'class_number'=>1,
+            'parent_master_id'=>null,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ];
@@ -30,6 +31,7 @@ class _O_k_r_TableSeeder extends Seeder
             'key_result' => '公式アカウントを作りで毎日投稿',
             'parent_id' => 1,
             'class_number'=>2,
+            'parent_master_id'=>1,
             'master_flag' => false,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
@@ -42,6 +44,7 @@ class _O_k_r_TableSeeder extends Seeder
             'key_result' => '公式アカウントを作りで毎日投稿',
             'parent_id' => 1,
             'class_number'=>2,
+            'parent_master_id'=>1,
             'master_flag' => false,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),

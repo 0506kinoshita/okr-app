@@ -52,35 +52,31 @@
                         </form>
                     </div>
                 </li>
-                {{$parent = $okr->id}}
                 @endif
                 @endforeach
             </ul>
         </div>
     </section>
-
+<div id="aaa"></div>
     <section class="section_wrap">
         <h1 class="title">3</h1>
         <div class="other_than_border_right"></div>
         <div class="top_objective company_key_result">
             <ul class="flex">
                 @foreach($okrs as $okr)
-                @empty($parent)
-                @else
-                    @if($okr->parent_id == $parent)
-                    <li class="okr_set leaderline">
-                        <p class="content third_content">{{ $okr->objective }}</p>
-                        <p class="content third_content">{{ $okr->key_result }}</p>
-                        <div class="flex add_okr_son">
-                            <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button">編集</a>
-                            <form method="post" action="/Home/{{$okr->id}}">
-                                {{ csrf_field() }}
-                                <input type="submit" value="削除" class="button delete" onclick='return confirm("本当に削除しますか？");'>
-                            </form>
-                        </div>
-                    </li>
-                    @endif
-                @endempty
+                @if($okr->parent_master_id == $id && $okr->class_number==3)
+                <li class="okr_set second_leaderline">
+                    <p class="content third_content">{{ $okr->objective }}</p>
+                    <p class="content third_content">{{ $okr->key_result }}</p>
+                    <div class="flex add_okr_son">
+                        <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button">編集</a>
+                        <form method="post" action="/Home/{{$okr->id}}">
+                            {{ csrf_field() }}
+                            <input type="submit" value="削除" class="button delete" onclick='return confirm("本当に削除しますか？");'>
+                        </form>
+                    </div>
+                </li>
+                @endif
                 @endforeach
             </ul>
         </div>
