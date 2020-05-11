@@ -57,7 +57,7 @@
             </ul>
         </div>
     </section>
-<div id="aaa"></div>
+
     <section class="section_wrap">
         <h1 class="title">3</h1>
         <div class="other_than_border_right"></div>
