@@ -8,6 +8,9 @@
     text-align: center;
     font-size: 16px;
 }
+.okr_set:hover{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.24),0 4px 8px rgba(0, 0, 0, 0.48);
+}
 .section_wrap{
     display:flex;
     margin:40px;

@@ -8,13 +8,25 @@
 
 <form action="/Home/{id}/edit" method="post" class="add_infomation">
     {{ csrf_field() }}
+    <div class="add_objective">
         @foreach($okrs as $okr)
         @if($okr->id == $id)
         <input type="text" name="id" style="display:none;" value={{$okr->id}}>
-        <p>OBJECTIVE</p><input type="text" name="objective" style="width:500px; height:60px; font-size: 100%;" value={{$okr->objective}}>
-        <p>KEY_RESULT</p><input type="text" name="key_result" style="width:500px; height:60px; font-size: 100%;" value={{$okr->key_result}}>
+        <h2>OBJECTIVE</h2>
+            @if($errors->has('objective'))
+                <p>{{ $errors->first('objective') }}</p>
+            @endif
+        <input type="text" name="objective" style="width:500px; height:60px; font-size: 100%;" value={{$okr->objective}}>
+    </div>
+    <div class="add_key_result">
+        <h2>KEY_RESULT</h2>
+            @if($errors->has('key_result'))
+                <p>{{ $errors->first('key_result') }}</p>
+            @endif
+            <input type="text" name="key_result" style="width:500px; height:60px; font-size: 100%;" value={{$okr->key_result}}>
         @endif
         @endforeach
+    </div>
     <input type="submit" value="編集完了" class="button add_okr_btn">
 </form>
 

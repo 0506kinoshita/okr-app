@@ -59,7 +59,7 @@ class HomeController extends Controller
         return view('home.edit',['okrs'=>$okr],['id'=>$id]);
     }
 
-    public function update(Request $request)
+    public function update(ValiDemoRequest $request)
     {
         $form = $request->all();
         unset($form['_token']);
