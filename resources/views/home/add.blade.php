@@ -7,10 +7,24 @@
 <div class="add_wrap">
 <form action="/Home/add" method="post" class="add_infomation">
     {{ csrf_field() }}
-    <p>OBJECTIVE</p><input type="text" name="objective" style="width:500px; height:60px; font-size: 100%;">
-    <p>KEY_RESULT</p><input type="text" name="key_result" style="width:500px; height:60px; font-size: 100%;">
+
+    <div class="add_objective">
+        <h2>OBJECTIVE</h2>
+        @if($errors->has('objective'))
+        <p>{{ $errors->first('objective') }}</p>
+        @endif
+        <input type="text" name="objective" style="width:500px; height:60px; font-size: 100%;" value="{{old('objective')}}">
+    </div>
+    <div class="add_key_result">
+        <h2>KEY_RESULT</h2>
+        @if($errors->has('key_result'))
+        <p>{{ $errors->first('key_result') }}</p>
+        @endif
+        <input type="text" name="key_result" style="width:500px; height:60px; font-size: 100%;" value="{{old('key_result')}}">
+    </div>
+
     <input type="text" style="display:none;" name="class_number" value=1>
-    <input type="submit" value="OKRを設定" class="button add_okr_btn">
+    <p><input type="submit" value="OKRを設定" class="button add_okr_btn"></p>
 </form>
 
 <div class="okr_document">

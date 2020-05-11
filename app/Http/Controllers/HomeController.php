@@ -6,6 +6,7 @@ use App\EloquentModel\OKR;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\ValiDemoRequest;
 
 class HomeController extends Controller
 {
@@ -30,7 +31,7 @@ class HomeController extends Controller
         return view('home.add_child',['id'=>$id],['okrs'=>$okr]);
     }
 
-    public function add_child_update(Request $request)
+    public function add_child_update(ValiDemoRequest $request)
     {
         $info = new OKR;
         $form = $request->all();
@@ -40,7 +41,8 @@ class HomeController extends Controller
         return redirect('/');
     }
 
-    public function create(Request $request)
+    // add.blade.php
+    public function create(ValiDemoRequest $request)
     {
         $info = new OKR;
         $form = $request->all();
