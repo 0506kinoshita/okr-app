@@ -3,10 +3,20 @@
     color:white;
 }
 .okr_set{
+    position: relative;
     margin: 36px auto;
+    padding: 4px;
     width: 200px;
     text-align: center;
     font-size: 16px;
+}
+.okr_set > a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .okr_set:hover{
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.24),0 4px 8px rgba(0, 0, 0, 0.48);
@@ -47,6 +57,7 @@
 .top_objective{
     width:100%;
 }
+
 .flex{
     font-size: 0;
     width:100%;
