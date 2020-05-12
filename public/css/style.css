@@ -36,16 +36,16 @@
 }
 .content{
     padding:8px;
-    margin:12px 0;
+    margin-bottom: 12px;
 }
 .top_content{
-    background-color: rgb(233, 60, 60);
+    background-color: rgb(220, 80, 80);
 }
 .second_content{
-    background-color: rgb(68, 219, 93);
+    background-color: rgb(220, 130, 80);
 }
 .third_content{
-    background-color: rgb(87, 216, 255);
+    background-color: rgb(220, 180, 50);
 }
 .other_than_border_right{
     height:150px;
@@ -150,13 +150,17 @@ article.add_example p{
     margin-bottom:8rem;
 }
 .button{
-    padding: 8px 12px;
+    padding:12px;
     color: #FFF;
     background: #668ad8;
-    border-bottom: solid 4px #627295;
     border-radius: 3px;
     line-height: 20px;
 }
+.button:hover{
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .add_okr_btn{
     margin :60px 0 0 0;
     font-size: 20px;
@@ -165,7 +169,16 @@ article.add_example p{
     font-size:18px;
 }
 .delete{
+    box-sizing: border-box;
     font-size:18px;
     background: #43557c;
-    border-bottom: solid 4px #627295;
+    border-bottom: solid 4px red;
+    outline: none;
+    border-style:none;
+    line-height: 20px;
+
+}
+
+a.okr_a{
+    color:white;
 }

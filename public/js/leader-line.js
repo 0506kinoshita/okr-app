@@ -106,8 +106,9 @@ for (let i = 0; i <= leaderline.length - 1; i++) {
     document.getElementById('start'),
     document.getElementById('end'+i),
   );
-
+  // line.dash = true ;
   line.setOptions({startSocket: 'bottom', endSocket: 'top'});
+  line.color = '#ffa500';
 }
 
 for (let i = 0; i <= second_leaderline.length - 1; i++) {
@@ -117,8 +118,9 @@ for (let i = 0; i <= second_leaderline.length - 1; i++) {
     document.getElementById('end'+i),
     document.getElementById('second_end'+i),
   );
+  // line2.dash = true ;
   line2.setOptions({startSocket: 'bottom', endSocket: 'top'});
-
+  line2.color = '#ffa500';
 }
 
 
