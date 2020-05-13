@@ -28,6 +28,7 @@
                     <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button">追加</a>
                     <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button">編集</a>
                     <form method="post" action="/Home/{{$okr->id}}">
+                    {{ csrf_field() }}
                         <input type="submit" value="削除" class="button delete" onclick='return confirm("本当に削除しますか？");'>
                     </form>
                 </div>
