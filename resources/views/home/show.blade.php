@@ -25,11 +25,11 @@
                 </ul>
 
                 <div class="flex add_okr_son">
-                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button">追加</a>
-                    <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button">編集</a>
+                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button add_button">追加</a>
+                    <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button edit_button">編集</a>
                     <form method="post" action="/Home/{{$okr->id}}">
                     {{ csrf_field() }}
-                        <input type="submit" value="削除" class="button delete" onclick='return confirm("本当に削除しますか？");'>
+                        <input type="submit" value="削除" class="button delete_button" onclick='return confirm("本当に削除しますか？");'>
                     </form>
                 </div>
             </div>
@@ -54,11 +54,11 @@
                     </a>
                     </div>
                     <div class="flex add_okr_son">
-                        <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button">追加</a>
-                        <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button">編集</a>
+                        <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button add_button">追加</a>
+                        <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button edit_button">編集</a>
                         <form method="post" action="/Home/{{$okr->id }}">
                             {{ csrf_field() }}
-                            <input type="submit" value="削除" class="button delete" onclick='return confirm("本当に削除しますか？");'>
+                            <input type="submit" value="削除" class="button delete_button" onclick='return confirm("本当に削除しますか？");'>
                         </form>
                     </div>
                 </li>
@@ -82,10 +82,10 @@
                     </a>
                 </div>
                 <div class="flex add_okr_son">
-                        <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button">編集</a>
+                        <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button edit_button">編集</a>
                         <form method="post" action="/Home/{{$okr->id}}">
                             {{ csrf_field() }}
-                            <input type="submit" value="削除" class="button delete" onclick='return confirm("本当に削除しますか？");'>
+                            <input type="submit" value="削除" class="button delete_button" onclick='return confirm("本当に削除しますか？");'>
                         </form>
                 </div>
                 </li>

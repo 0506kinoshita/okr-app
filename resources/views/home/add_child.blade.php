@@ -7,38 +7,38 @@
 <div class="add_wrap">
 @foreach($okrs as $okr)
 @if($id==$okr->id)
-    <div class="parent_infomation">
-        <div class="exist_okr" id="exist_okr">
-            <h2>OBJECTIVE</h2>
-            <p class="exist_okr_infomation">{{ $okr->objective }}</p>
-            <h2>KEY_RESULT</h2>
-            <p class="exist_okr_infomation">{{ $okr->key_result }}</p>
-        </div>
-        <form action="/Home/{id}/add_child" method="post" class="add_infomation" id="add_infomation">
-            {{ csrf_field() }}
-            <div class="add_okr_contents">
-                <h2>OBJECTIVE</h2>
-                    @if($errors->has('objective'))
-                        <p>{{ $errors->first('objective') }}</p>
-                    @endif
-                <input type="text" name="objective" maxlength="30" style="width:500px; height:60px; font-size: 100%;">
-            </div>
-            <div class="add_okr_contents">
-                <h2>KEY_RESULT</h2>
-                    @if($errors->has('key_result'))
-                        <p>{{ $errors->first('key_result') }}</p>
-                    @endif
-                <input type="text" name="key_result" maxlength="30" style="width:500px; height:60px; font-size: 100%;">
-                <input type="text" style="display:none;" name="parent_id" value= {{$id}}>
-                <input  type="text" style="display:none;" name="master_flag" value="0">
-            </div>
-
-            <input type="text" style="display:none;" name="class_number" value={{$okr->class_number + 1}}>
-            <input type="text" style="display:none;" name="parent_master_id" value={{$okr->parent_id}}>
-
-            <input type="submit" value="追加する" class="button add_okr_btn">
-        </form>
+<div class="parent_infomation">
+    <div class="exist_okr" id="exist_okr">
+        <h2>OBJECTIVE</h2>
+        <p class="exist_okr_infomation">{{ $okr->objective }}</p>
+        <h2>KEY_RESULT</h2>
+        <p class="exist_okr_infomation">{{ $okr->key_result }}</p>
     </div>
+    <form action="/Home/{id}/add_child" method="post" class="add_infomation" id="add_infomation">
+        {{ csrf_field() }}
+        <div class="add_okr_contents">
+            <h2>OBJECTIVE</h2>
+                @if($errors->has('objective'))
+                    <p>{{ $errors->first('objective') }}</p>
+                @endif
+            <input type="text" name="objective" style="width:500px; height:60px; font-size: 100%;">
+        </div>
+        <div class="add_okr_contents">
+            <h2>KEY_RESULT</h2>
+                @if($errors->has('key_result'))
+                    <p>{{ $errors->first('key_result') }}</p>
+                @endif
+            <input type="text" name="key_result" style="width:500px; height:60px; font-size: 100%;">
+            <input type="text" style="display:none;" name="parent_id" value= {{$id}}>
+            <input  type="text" style="display:none;" name="master_flag" value="0">
+        </div>
+
+        <input type="text" style="display:none;" name="class_number" value={{$okr->class_number + 1}}>
+        <input type="text" style="display:none;" name="parent_master_id" value={{$okr->parent_id}}>
+
+        <input type="submit" value="追加する" class="button add_button add_okr_btn">
+    </form>
+</div>
 @endif
 @endforeach
 
@@ -60,4 +60,13 @@
 </div>
 </div>
 
+<script>
+let add_line = new LeaderLine(
+  document.getElementById('exist_okr'),
+  document.getElementById('add_infomation'),
+);
+add_line.setOptions({startSocket: 'bottom', endSocket: 'top'});
+add_line.color = '#ffa500';
+add_line.size = 8;
+</script>
 @endsection

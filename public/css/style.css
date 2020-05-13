@@ -135,9 +135,6 @@ article.add_example p{
 .add_okr_contents{
     margin:60px 0 0 0;
 }
-.add_objective p{
-    display: inline;
-}
 .okr_document{
     margin :0 0 0 10%;
 }
@@ -167,7 +164,6 @@ article.add_example p{
 .button{
     padding:12px;
     color: #FFF;
-    background: #668ad8;
     border-radius: 3px;
     line-height: 20px;
 }
@@ -175,7 +171,12 @@ article.add_example p{
     font-size: 24px;
     font-weight: bold;
 }
-
+.add_button{
+    background: linear-gradient(#50b4ff,#5064ff);
+}
+.edit_button{
+    background:linear-gradient(#50a0ff,#503cff);
+}
 .add_okr_btn{
     margin :60px 0 0 0;
     font-size: 20px;
@@ -183,10 +184,11 @@ article.add_example p{
 .add_okr_son{
     font-size:18px;
 }
-.delete{
+.delete_button{
     box-sizing: border-box;
     font-size:18px;
-    background: #43557c;
+    background:linear-gradient(#4355d2,#435564);
+    /* 43557c */
     outline: none;
     border-style:none;
     line-height: 20px;

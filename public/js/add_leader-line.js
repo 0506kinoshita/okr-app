@@ -81,20 +81,38 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
-/*!*******************************************!*\
-  !*** multi ./resources/js/leader-line.js ***!
-  \*******************************************/
+/******/ ({
+
+/***/ "./resources/js/add_leader-line.js":
+/*!*****************************************!*\
+  !*** ./resources/js/add_leader-line.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var add_line = new LeaderLine(document.getElementById('exist_okr'), document.getElementById('add_infomation'));
+add_line.setOptions({
+  startSocket: 'bottom',
+  endSocket: 'top'
+});
+add_line.color = '#ffa500';
+add_line.size = 8;
+
+/***/ }),
+
+/***/ 2:
+/*!***********************************************!*\
+  !*** multi ./resources/js/add_leader-line.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!(function webpackMissingModule() { var e = new Error("Cannot find module '/Users/kinoshitahiroshitaka/Desktop/okr-app/resources/js/leader-line.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+module.exports = __webpack_require__(/*! /Users/kinoshitahiroshitaka/Desktop/okr-app/resources/js/add_leader-line.js */"./resources/js/add_leader-line.js");
 
 
 /***/ })
-/******/ ]);
+
+/******/ });

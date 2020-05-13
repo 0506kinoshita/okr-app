@@ -24,7 +24,7 @@
     </div>
 
     <input type="text" style="display:none;" name="class_number" value=1>
-    <input type="submit" value="OKRを設定" class="button add_okr_btn">
+    <input type="submit" value="OKRを設定" class="button add_button add_okr_btn">
 </form>
 
 <div class="okr_document">
