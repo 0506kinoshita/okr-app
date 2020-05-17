@@ -1,5 +1,7 @@
 {
+    "/js/add_leader-line.js": "/js/add_leader-line.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/js/leader-line.js": "/js/leader-line.js"
+    "/js/edit_leader-line.js": "/js/edit_leader-line.js",
+    "/js/show_leader-line.js": "/js/show_leader-line.js"
 }

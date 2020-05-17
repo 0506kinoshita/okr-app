@@ -84,17 +84,55 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
-/*!*******************************************!*\
-  !*** multi ./resources/js/leader-line.js ***!
-  \*******************************************/
+/******/ ({
+
+/***/ "./resources/js/show_leader-line.js":
+/*!******************************************!*\
+  !*** ./resources/js/show_leader-line.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var end = "end";
+var sencondend = "second_end";
+var leaderline = document.getElementsByClassName("leaderline");
+var second_leaderline = document.getElementsByClassName("second_leaderline");
+
+for (var i = 0; i <= leaderline.length - 1; i++) {
+  leaderline[i].setAttribute("id", end + i);
+  var line = new LeaderLine(document.getElementById('start'), document.getElementById('end' + i)); // line.dash = true ;
+
+  line.setOptions({
+    startSocket: 'bottom',
+    endSocket: 'top'
+  });
+  line.color = '#ffa500';
+}
+
+for (var _i = 0; _i <= second_leaderline.length - 1; _i++) {
+  second_leaderline[_i].setAttribute("id", sencondend + _i);
+
+  var line2 = new LeaderLine(document.getElementById('end' + _i), document.getElementById('second_end' + _i)); // line2.dash = true ;
+
+  line2.setOptions({
+    startSocket: 'bottom',
+    endSocket: 'top'
+  });
+  line2.color = '#ffa500';
+}
+
+/***/ }),
+
+/***/ 1:
+/*!************************************************!*\
+  !*** multi ./resources/js/show_leader-line.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!(function webpackMissingModule() { var e = new Error("Cannot find module '/Users/kinoshitahiroshitaka/Desktop/okr-app/resources/js/leader-line.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+module.exports = __webpack_require__(/*! /Users/kinoshitahiroshitaka/Desktop/okr-app/resources/js/show_leader-line.js */"./resources/js/show_leader-line.js");
 
 
 /***/ })
-/******/ ]);
+
+/******/ });

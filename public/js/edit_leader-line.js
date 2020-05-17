@@ -81,20 +81,38 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
-/*!*******************************************!*\
-  !*** multi ./resources/js/leader-line.js ***!
-  \*******************************************/
+/******/ ({
+
+/***/ "./resources/js/edit_leader-line.js":
+/*!******************************************!*\
+  !*** ./resources/js/edit_leader-line.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var edit_line = new LeaderLine(document.getElementById('exist_okr2'), document.getElementById('edit_infomation'));
+edit_line.setOptions({
+  startSocket: 'bottom',
+  endSocket: 'top'
+});
+edit_line.color = '#ffa500';
+edit_line.size = 8;
+
+/***/ }),
+
+/***/ 3:
+/*!************************************************!*\
+  !*** multi ./resources/js/edit_leader-line.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-!(function webpackMissingModule() { var e = new Error("Cannot find module '/Users/kinoshitahiroshitaka/Desktop/okr-app/resources/js/leader-line.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+module.exports = __webpack_require__(/*! /Users/kinoshitahiroshitaka/Desktop/okr-app/resources/js/edit_leader-line.js */"./resources/js/edit_leader-line.js");
 
 
 /***/ })
-/******/ ]);
+
+/******/ });

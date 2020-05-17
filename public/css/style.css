@@ -23,7 +23,6 @@
 }
 .section_wrap{
     display:flex;
-    margin:40px;
 }
 .title{
     color:black;
@@ -36,16 +35,16 @@
 }
 .content{
     padding:8px;
-    margin:12px 0;
+    margin-bottom: 12px;
 }
 .top_content{
-    background-color: rgb(233, 60, 60);
+    background-color: rgb(220, 80, 80);
 }
 .second_content{
-    background-color: rgb(68, 219, 93);
+    background-color: rgb(220, 130, 80);
 }
 .third_content{
-    background-color: rgb(87, 216, 255);
+    background-color: rgb(220, 180, 50);
 }
 .other_than_border_right{
     height:150px;
@@ -91,7 +90,7 @@ header{
 /* 追加画面--add.blade.php--add_child.blade.php */
 .add_wrap{
     display: flex;
-    margin:80px;
+    margin:80px 10%;
 }
 .add_wrap input[type="text"]{
     border:solid 0px;
@@ -99,6 +98,8 @@ header{
 }
 .add_wrap input:focus{
     outline:0;
+}
+.parent_infomation > p{
 }
 .add_example{
     margin:40px 0 0 0;
@@ -110,21 +111,31 @@ header{
 article.add_example p{
     margin:0;
 }
+.exist_okr{
+    margin-bottom:100px;
+}
+.exist_okr > p:first-child{
+    margin:0 0 12px 0;
+}
+.exist_okr h2,
 .add_infomation h2{
     font-weight: bold;
     font-size: 20px;
 }
+.exist_okr > p{
+    font-size:24px;
+}
+.exist_okr_infomation{
+    margin-bottom:20px;
+}
 .add_infomation p{
     color:red;
 }
-.add_objective{
+.add_okr_contents{
     margin:60px 0 0 0;
 }
-.add_objective p{
-    display: inline;
-}
 .okr_document{
-    margin :0 0 0 60px;
+    margin :0 0 0 10%;
 }
 .okr_document p{
     margin:12px;
@@ -144,28 +155,50 @@ article.add_example p{
 }
 .index_okr p{
     font-size:20px;
-    margin-bottom:20px;
 }
 .index_list{
-    margin-bottom:8rem;
+    margin-bottom:32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12),0 4px 8px rgba(0, 0, 0, 0.24);
+    text-align: center;
+    width: 400px;
+}
+.margin_bottom{
+    margin-bottom: 20px;
 }
 .button{
-    padding: 8px 12px;
+    padding:12px;
     color: #FFF;
-    background: #668ad8;
-    border-bottom: solid 4px #627295;
     border-radius: 3px;
     line-height: 20px;
 }
+.button:hover{
+    font-size: 24px;
+    font-weight: bold;
+}
+.add_button{
+    background: linear-gradient(#50b4ff,#5064ff);
+}
+.edit_button{
+    background:linear-gradient(#50a0ff,#503cff);
+}
 .add_okr_btn{
-    margin :60px 0 0 0;
+    margin-top :60px;
     font-size: 20px;
 }
 .add_okr_son{
     font-size:18px;
 }
-.delete{
+.delete_button{
+    box-sizing: border-box;
     font-size:18px;
-    background: #43557c;
-    border-bottom: solid 4px #627295;
+    background:linear-gradient(#4355d2,#435564);
+    /* 43557c */
+    outline: none;
+    border-style:none;
+    line-height: 20px;
+
+}
+
+a.okr_a{
+    color:white;
 }
