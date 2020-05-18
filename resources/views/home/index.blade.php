@@ -8,14 +8,14 @@
     @foreach($okrs as $okr)
     @if($okr->master_flag == 1)
         <div class="index_list">
-            <a href=" {{ action('HomeController@show' , $okr->id )}} " class="">
+            <a href=" {{ action('HomeController@show' , $okr->id )}} ">
                 <p class="margin_bottom">{{ $okr->objective }}</p>
-                <p class="">{{ $okr->key_result }}</p>
-            </a>
-        </div>
+                <p>{{ $okr->key_result }}</p>
+            </a> 
+         </div>
     @endif
     @endforeach
-    <div class="add_okr_btn">
+    <div class="add_okr_btn text_align_center">
         <a href=" {{ url('/Home/add') }} " class="button add_button">新しくOKRを追加する</a>
     </div>
 </section>

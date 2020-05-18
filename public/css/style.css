@@ -152,15 +152,23 @@ article.add_example p{
     margin:20px 0 40px 0;
     font-weight:bold;
     font-size:32px;
+    text-align: center;
 }
 .index_okr p{
     font-size:20px;
 }
 .index_list{
-    margin-bottom:32px;
+    margin:40px auto;
+    padding:4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12),0 4px 8px rgba(0, 0, 0, 0.24);
     text-align: center;
     width: 400px;
+}
+.index_list:hover{
+    box-shadow: 0 4px 6px rgba(220, 130, 80),0 2px 4px rgba(220, 230, 80);
+}
+.text_align_center{
+    text-align: center;
 }
 .margin_bottom{
     margin-bottom: 20px;
@@ -196,9 +204,7 @@ article.add_example p{
     outline: none;
     border-style:none;
     line-height: 20px;
-
 }
-
 a.okr_a{
     color:white;
 }
