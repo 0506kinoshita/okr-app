@@ -23,7 +23,6 @@
 }
 .section_wrap{
     display:flex;
-    margin:40px;
 }
 .title{
     color:black;
@@ -191,7 +190,7 @@ article.add_example p{
     background:linear-gradient(#50a0ff,#503cff);
 }
 .add_okr_btn{
-    margin :60px 0 0 0;
+    margin-top :60px;
     font-size: 20px;
 }
 .add_okr_son{
@@ -205,7 +204,6 @@ article.add_example p{
     outline: none;
     border-style:none;
     line-height: 20px;
-
 }
 a.okr_a{
     color:white;
