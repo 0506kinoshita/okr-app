@@ -90,7 +90,7 @@ header{
 /* 追加画面--add.blade.php--add_child.blade.php */
 .add_wrap{
     display: flex;
-    margin:80px 10%;
+    margin:20px 10%;
 }
 .add_wrap input[type="text"]{
     border:solid 0px;
@@ -113,9 +113,13 @@ article.add_example p{
 }
 .exist_okr{
     margin-bottom:100px;
+    padding:12px;
 }
 .exist_okr > p:first-child{
     margin:0 0 12px 0;
+}
+.add_infomation{
+    padding:12px;
 }
 .exist_okr h2,
 .add_infomation h2{
