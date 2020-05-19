@@ -120,13 +120,13 @@ article.add_example p{
 .exist_okr h2,
 .add_infomation h2{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
 }
 .exist_okr > p{
     font-size:24px;
 }
 .exist_okr_infomation{
-    margin-bottom:20px;
+    margin-bottom:28px;
 }
 .add_infomation p{
     color:red;
