@@ -1,30 +1,30 @@
 /* show.blade.php */
 .okr{
     color:white;
-}
-.okr_set{
+  }
+  .okr_set{
     position: relative;
     margin: 36px auto;
     padding: 4px;
     width: 200px;
     text-align: center;
     font-size: 16px;
-}
-.okr_set > a{
+  }
+  .okr_set > a{
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-.okr_set:hover{
+  }
+  .okr_set:hover{
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.24),0 4px 8px rgba(0, 0, 0, 0.48);
-}
-.section_wrap{
+  }
+  .section_wrap{
     display:flex;
-}
-.title{
+  }
+  .title{
     color:black;
     font-size:40px;
     display: flex;
@@ -32,184 +32,214 @@
     justify-content: center;
     align-items: center;
     width:100px;
-}
-.content{
+  }
+  .content{
     padding:8px;
     margin-bottom: 12px;
-}
-.top_content{
+  }
+  .top_content{
     background-color: rgb(220, 80, 80);
-}
-.second_content{
+  }
+  .second_content{
     background-color: rgb(220, 130, 80);
-}
-.third_content{
+  }
+  .third_content{
     background-color: rgb(220, 180, 50);
-}
-.other_than_border_right{
+  }
+  .other_than_border_right{
     height:150px;
     width:150px;
     border:solid silver;
     border-width:3px 0 3px 3px;
     margin:40px;
-}
-.top_objective{
+  }
+  .top_objective{
     width:100%;
-}
-
-.flex{
+  }
+  
+  .flex{
     font-size: 0;
     width:100%;
     display: flex;
     justify-content: space-between;
-}
-
-/* header.blade.php */
-header{
+  }
+  
+  /* header.blade.php */
+  header{
     background-color: #eee;
     height:60px;
     display:block;
     border-bottom:solid 5px orange !important;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-}
-.h-index{
+  }
+  .h-index{
     float:left;
-}
-.menu{
+  }
+  .menu{
     font-size:20px;
     font-weight:bold;
     line-height:60px;
-}
-.menu a{
+  }
+  .menu a{
     margin:0 16px;
-}
-.dropdown-menu-right{
+  }
+  .dropdown-menu-right{
     float:right;
-}
-
-/* 追加画面--add.blade.php--add_child.blade.php */
-.add_wrap{
+  }
+  
+  /* 追加画面--add.blade.php--add_child.blade.php */
+  .add_wrap{
     display: flex;
     margin:20px 10%;
-}
-.add_wrap input[type="text"]{
+  }
+  .add_wrap input[type="text"]{
     border:solid 0px;
     border-bottom:solid 1px;
-}
-.add_wrap input:focus{
+  }
+  .add_wrap input:focus{
     outline:0;
-}
-.parent_infomation > p{
-}
-.add_example{
+  }
+  .parent_infomation > p{
+  }
+  .add_example{
     margin:40px 0 0 0;
-}
-.add_example h1{
+  }
+  .add_example h1{
     font-weight: bold;
     margin:28px 0 0 0;
-}
-article.add_example p{
+  }
+  article.add_example p{
     margin:0;
-}
-.exist_okr{
+  }
+  .exist_okr{
     margin-bottom:100px;
     padding:12px;
-}
-.exist_okr > p:first-child{
+  }
+  .exist_okr > p:first-child{
     margin:0 0 12px 0;
-}
-.add_infomation{
+  }
+  .add_infomation{
     padding:12px;
-}
-.exist_okr h2,
-.add_infomation h2{
+  }
+  .exist_okr h2,
+  .add_infomation h2{
     font-weight: bold;
     font-size: 28px;
-}
-.exist_okr > p{
+  }
+  .exist_okr > p{
     font-size:24px;
-}
-.exist_okr_infomation{
+  }
+  .exist_okr_infomation{
     margin-bottom:28px;
-}
-.add_infomation p{
+  }
+  .add_infomation p{
     color:red;
-}
-.add_okr_contents{
+  }
+  .add_okr_contents{
     margin:60px 0 0 0;
-}
-.okr_document{
+  }
+  .okr_document{
     margin :0 0 0 10%;
-}
-.okr_document p{
+  }
+  .okr_document p{
     margin:12px;
-}
-.okr_document span{
+  }
+  .okr_document span{
     font-weight: bold;
-}
-
-/* index.blade.php */
-.index_okr{
+  }
+  
+  /* index.blade.php */
+  .index_okr{
     margin:20px;
-}
-.index_okr h2{
+  }
+  .index_okr h2{
     margin:20px 0 40px 0;
     font-weight:bold;
     font-size:32px;
     text-align: center;
-}
-.index_okr p{
+  }
+  .index_okr p{
     font-size:20px;
-}
-.index_list{
+  }
+  .index_list{
     margin:40px auto;
     padding:4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12),0 4px 8px rgba(0, 0, 0, 0.24);
     text-align: center;
     width: 400px;
-}
-.index_list:hover{
+  }
+  .index_list:hover{
     box-shadow: 0 4px 6px rgba(220, 130, 80),0 2px 4px rgba(220, 230, 80);
-}
-.text_align_center{
+  }
+  .text_align_center{
     text-align: center;
-}
-.margin_bottom{
+  }
+  .margin_bottom{
     margin-bottom: 20px;
-}
-.button{
+  }
+  .button{
     padding:12px;
     color: #FFF;
     border-radius: 3px;
     line-height: 20px;
-}
-.button:hover{
+  }
+  .button:hover{
     font-size: 24px;
     font-weight: bold;
-}
-.add_button{
+  }
+  .add_button{
     background: linear-gradient(#50b4ff,#5064ff);
     position:inline ;
-}
-.edit_button{
+  }
+  .edit_button{
     background:linear-gradient(#50a0ff,#503cff);
-}
-.add_okr_btn{
+  }
+  .add_okr_btn{
     margin-top :60px;
     font-size: 20px;
-}
-.add_okr_son{
+  }
+  .add_okr_son{
     font-size:18px;
-}
-.delete_button{
+  }
+  .delete_button{
     box-sizing: border-box;
     font-size:18px;
     background:linear-gradient(#4355d2,#435564);
-    /* 43557c */
     outline: none;
     border-style:none;
     line-height: 20px;
-}
-a.okr_a{
+  }
+  a.okr_a{
     color:white;
-}
+  }
+  
+  /* showページ */
+  @media screen and (max-width: 767px){
+    .okr_set{
+        width:130px;
+        font-size: 12px;
+    }
+    .delete_button,
+    .edit_button,
+    .add_button{
+        font-size: 12px;
+    }
+    .button{
+        padding:4px;
+    }
+    .button:hover{
+        font-size: 12px;
+    }
+    .content{
+        padding:8px 0px;
+        min-height: 36px;
+    }
+  }
+  @media screen and (max-width: 959px) {
+    .title{
+        display: none;
+    }
+    .other_than_border_right{
+        display: none;
+    }
+  }
