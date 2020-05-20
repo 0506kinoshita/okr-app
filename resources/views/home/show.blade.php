@@ -25,7 +25,17 @@
                 </ul>
 
                 <div class="flex add_okr_son">
-                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button add_button">追加</a>
+                    <p style="display:none;">{{ $n = 0 }}</p>
+                    @foreach($okrs2 as $okr2)
+                        @if($id == $okr2->parent_id)
+                            <p style="display:none;">{{ $n++ }}</p>
+                        @endif
+                    @endforeach
+
+                    @if($n > 2)
+                    @else
+                        <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button add_button">追加</a>
+                    @endif
                     <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button edit_button">編集</a>
                     <form method="post" action="/Home/{{$okr->id}}">
                     {{ csrf_field() }}
@@ -74,6 +84,8 @@
             <ul class="flex">
                 @foreach($okrs as $okr)
                 @if($okr->parent_master_id == $id && $okr->class_number==3)
+                    @foreach($okrs2 as $okr2)
+                    @if($okr2->id == $okr->parent_id)
                 <li class="okr_set second_leaderline">
                 <div>
                     <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="okr_a">
@@ -89,11 +101,22 @@
                         </form>
                 </div>
                 </li>
+                    @endif
+                    @endforeach
+
                 @endif
                 @endforeach
             </ul>
         </div>
     </section>
 </div>
+
+<script>
+$(function(){
+    if($('#second_end2').length){
+        $('.add_button').css('display','none');
+    }
+});
+</script>
 
 @endsection

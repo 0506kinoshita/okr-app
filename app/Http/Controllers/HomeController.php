@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $okr = DB::table('_o_k_r')->get();
+        $okr = OKR::all();
         $user = Auth::user();
         $param = ['user' => $user];
         return view('home.index',['okrs'=>$okr]);
@@ -26,7 +26,7 @@ class HomeController extends Controller
 
     public function add_child(Request $request,$id)
     {
-        $okr = DB::table('_o_k_r')->get();
+        $okr = OKR::all();
 
         return view('home.add_child',['id'=>$id],['okrs'=>$okr]);
     }
@@ -54,7 +54,7 @@ class HomeController extends Controller
 
     public function edit(Request $request, $id)
     {
-        $okr = DB::table('_o_k_r')->get();
+        $okr = OKR::all();
 
         return view('home.edit',['okrs'=>$okr],['id'=>$id]);
     }
@@ -76,9 +76,11 @@ class HomeController extends Controller
 
     public function show(Request $request,$id)
     {
-        $okr = DB::table('_o_k_r')->get();
+        $okrs = OKR::orderBy('parent_id','asc')->get();
+        $okrs2 = OKR::where('class_number', '2')->get();
         $user = Auth::user();
         $param = ['user' => $user];
-        return view('home.show',['okrs'=>$okr] ,['id'=>$id]);
+        return view('home.show',compact('okrs','okrs2','id'));
+
     }
 }

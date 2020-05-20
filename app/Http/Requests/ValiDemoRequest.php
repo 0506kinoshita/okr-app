@@ -24,15 +24,18 @@ class ValiDemoRequest extends FormRequest
     public function rules()
     {
         return [
-            'objective' => 'required',
-            'key_result' => 'required',
+            'objective' => 'required|max:20',
+            'key_result' => 'required|max:20',
         ];
     }
 
     public function messages() {
         return [
             'objective.required' => 'OBJECTIVEを入力してください',
-            'key_result.required'  => 'KEY_RESULTを入力してください',
+            'objective.max' => '20文字以内で入力してください',
+            'key_result.required' => 'KEY_RESULTを入力してください',
+            'key_result.max' => '20文字以内で入力してください',
+
         ];
     }
 }

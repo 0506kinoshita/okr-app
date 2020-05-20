@@ -90,7 +90,7 @@ header{
 /* 追加画面--add.blade.php--add_child.blade.php */
 .add_wrap{
     display: flex;
-    margin:80px 10%;
+    margin:20px 10%;
 }
 .add_wrap input[type="text"]{
     border:solid 0px;
@@ -113,20 +113,24 @@ article.add_example p{
 }
 .exist_okr{
     margin-bottom:100px;
+    padding:12px;
 }
 .exist_okr > p:first-child{
     margin:0 0 12px 0;
 }
+.add_infomation{
+    padding:12px;
+}
 .exist_okr h2,
 .add_infomation h2{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
 }
 .exist_okr > p{
     font-size:24px;
 }
 .exist_okr_infomation{
-    margin-bottom:20px;
+    margin-bottom:28px;
 }
 .add_infomation p{
     color:red;
@@ -185,6 +189,7 @@ article.add_example p{
 }
 .add_button{
     background: linear-gradient(#50b4ff,#5064ff);
+    position:inline ;
 }
 .edit_button{
     background:linear-gradient(#50a0ff,#503cff);
