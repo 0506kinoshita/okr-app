@@ -99,8 +99,6 @@
   .add_wrap input:focus{
     outline:0;
   }
-  .parent_infomation > p{
-  }
   .add_example{
     margin:40px 0 0 0;
   }
@@ -124,7 +122,7 @@
   .exist_okr h2,
   .add_infomation h2{
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
   }
   .exist_okr > p{
     font-size:24px;
@@ -163,7 +161,7 @@
   }
   .index_list{
     margin:40px auto;
-    padding:4px;
+    padding:4px 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12),0 4px 8px rgba(0, 0, 0, 0.24);
     text-align: center;
     width: 400px;
@@ -187,9 +185,9 @@
     font-size: 24px;
     font-weight: bold;
   }
-  .add_button{
+  .add_button,
+  .add_index_button{
     background: linear-gradient(#50b4ff,#5064ff);
-    position:inline ;
   }
   .edit_button{
     background:linear-gradient(#50a0ff,#503cff);
@@ -230,6 +228,11 @@
     .button:hover{
         font-size: 12px;
     }
+    .add_index_button:hover{
+        font-size: 20px;
+        padding:8px;
+
+    }
     .content{
         padding:8px 0px;
         min-height: 36px;
@@ -241,5 +244,59 @@
     }
     .other_than_border_right{
         display: none;
+    }
+  }
+  /* header */
+  @media screen and (max-width: 767px){
+    .menu {
+        font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 959px) {
+
+    .menu a {
+        margin: 0 4px;
+    }
+  }
+
+  /* index */
+  @media screen and (max-width: 959px) {
+    .index_list {
+        width:360px;
+        margin:20px auto;
+    }
+    .index_okr p{
+        font-size:16px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    .index_okr{
+        margin:0;
+    }
+
+  }
+
+  /* add */
+  @media screen and (max-width: 959px) {
+    .okr_document {
+        display: none;
+    }
+    .add_wrap{
+        margin:20px 0;
+    }
+    .add_infomation{
+        margin:0 auto;
+
+    }
+    .parent_infomation{
+        margin:0 auto;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .add_wrap{
+        margin:20px 5%;
+    }
+    .okr_document{
+        margin: 0 0 0 5%;
     }
   }
