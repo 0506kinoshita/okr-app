@@ -189,6 +189,7 @@ article.add_example p{
 }
 .add_button{
     background: linear-gradient(#50b4ff,#5064ff);
+    position:inline ;
 }
 .edit_button{
     background:linear-gradient(#50a0ff,#503cff);

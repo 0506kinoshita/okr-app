@@ -111,4 +111,12 @@
     </section>
 </div>
 
+<script>
+$(function(){
+    if($('#second_end2').length){
+        $('.add_button').css('display','none');
+    }
+});
+</script>
+
 @endsection
