@@ -4,12 +4,12 @@
 <header>
     @unless(\Request::is('/'))
     <div class="menu h-index">
-        <a href=" {{ url('/') }} ">登録したOKR一覧を見る</a>
+        <a href=" {{ url('/') }} ">登録したOKR一覧</a>
     </div>
     @endunless
     <div class="menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         @unless(\Request::is('Home/add'))
-        <a href=" {{ url('/Home/add') }} ">新しくOKRを追加する</a>
+        <a href=" {{ url('/Home/add') }} ">新しくOKRを追加</a>
         @endunless
 
         <a class="dropdown-item" href="{{ route('logout') }}"

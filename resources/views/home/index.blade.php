@@ -16,7 +16,7 @@
     @endif
     @endforeach
     <div class="add_okr_btn text_align_center">
-        <a href=" {{ url('/Home/add') }} " class="button add_button">新しくOKRを追加する</a>
+        <a href=" {{ url('/Home/add') }} " class="button add_index_button">新しくOKRを追加する</a>
     </div>
 </section>
 
