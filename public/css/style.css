@@ -95,6 +95,9 @@
   .add_wrap input[type="text"]{
     border:solid 0px;
     border-bottom:solid 1px;
+    width:500px;
+    height:60px;
+    font-size: 120%;
   }
   .add_wrap input:focus{
     outline:0;
@@ -261,15 +264,17 @@
 
   /* index */
   @media screen and (max-width: 959px) {
-    .index_list {
-        width:360px;
-        margin:20px auto;
-    }
+
     .index_okr p{
         font-size:16px;
     }
   }
   @media screen and (max-width: 767px){
+    .index_list {
+        width:320px;
+        margin:20px auto;
+        padding:4px 8px;
+    }
     .index_okr{
         margin:0;
     }
@@ -290,6 +295,13 @@
     }
     .parent_infomation{
         margin:0 auto;
+    }
+    .add_wrap input[type="text"]{
+        border:solid 0px;
+        border-bottom:solid 1px;
+        width:400px;
+        height:60px;
+        font-size: 100%;
     }
   }
   @media screen and (max-width: 1100px) {

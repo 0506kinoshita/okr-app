@@ -14,7 +14,7 @@
             @if($errors->has('objective'))
             <p>{{ $errors->first('objective') }}</p>
             @endif
-        <input type="text" name="objective" style="width:500px; height:60px; font-size: 120%;" value="{{old('objective')}}">
+        <input type="text" name="objective" value="{{old('objective')}}">
     </div>
     <div class="add_okr_contents">
         <h2>KEY RESULT</h2>
@@ -22,7 +22,7 @@
             @if($errors->has('key_result'))
             <p>{{ $errors->first('key_result') }}</p>
             @endif
-        <input type="text" name="key_result" style="width:500px; height:60px; font-size: 120%;" value="{{old('key_result')}}">
+        <input type="text" name="key_result" value="{{old('key_result')}}">
     </div>
 
     <input type="text" style="display:none;" name="class_number" value=1>
