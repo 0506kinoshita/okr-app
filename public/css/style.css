@@ -4,7 +4,7 @@
   }
   .okr_set{
     position: relative;
-    margin: 36px auto;
+    margin: 28px auto;
     padding: 4px;
     width: 200px;
     text-align: center;
@@ -35,7 +35,8 @@
   }
   .content{
     padding:8px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    min-height: 36px;
   }
   .top_content{
     background-color: rgb(220, 80, 80);
