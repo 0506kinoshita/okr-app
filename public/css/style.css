@@ -52,7 +52,7 @@
     width:150px;
     border:solid silver;
     border-width:3px 0 3px 3px;
-    margin:40px;
+    margin:36px;
   }
   .top_objective{
     width:100%;
@@ -312,4 +312,13 @@
     .okr_document{
         margin: 0 0 0 5%;
     }
+  }
+  .flash_massage{
+      background-color: #ff9fbd;
+      color:#ff0000;
+      padding:8px 40px;
+      margin:0 auto;
+      text-align: center;
+      font-size: 120%;
+      font-weight: bold;
   }

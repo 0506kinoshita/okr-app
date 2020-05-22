@@ -5,14 +5,6 @@
 
 @section('content')
 <div class="add_wrap">
-@foreach($okrs3 as $okr3)
-    @if($okr3->parent_id == $id)
-    <p>できません</p>
-    @else
-    できまーす
-    @endif
-@endforeach
-
 @foreach($okrs as $okr)
 @if($id==$okr->id)
 <div class="parent_infomation">

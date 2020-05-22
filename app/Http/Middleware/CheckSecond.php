@@ -18,10 +18,11 @@ class CheckSecond
     {
         $okrs = OKR::all();
         $okrs3 = OKR::where('class_number', '3')->get();
+        $id = $request->id;
 
         foreach($okrs3 as $okr3){
-            if($okr3->parent_id == $request->id){
-                return redirect('/');
+            if($okr3->parent_id == $id){
+                return back()->with('flash_message', 'このOKRは既に登録済みです');
             }
         }
         return $next($request);

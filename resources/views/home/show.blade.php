@@ -3,6 +3,11 @@
 @include('home.header')
 
 @section('content')
+
+    @if(Session::has('flash_message'))
+        <p class="flash_massage">{{ session('flash_message') }}</p>
+    @endif
+
 <div class="okr">
     <section class="section_wrap">
         <h1 class="title">1</h1>
