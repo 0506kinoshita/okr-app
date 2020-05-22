@@ -3,6 +3,11 @@
 @include('home.header')
 
 @section('content')
+
+    @if(Session::has('flash_message'))
+        <p class="flash_massage">{{ session('flash_message') }}</p>
+    @endif
+
 <div class="okr">
     <section class="section_wrap">
         <h1 class="title">1</h1>
@@ -32,9 +37,9 @@
                         @endif
                     @endforeach
 
-                    @if($n > 2)
+                    @if($n < 3)
+                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button add_button">追加</a>
                     @else
-                        <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button add_button">追加</a>
                     @endif
                     <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button edit_button">編集</a>
                     <form method="post" action="/Home/{{$okr->id}}">

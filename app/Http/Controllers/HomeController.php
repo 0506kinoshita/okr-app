@@ -26,9 +26,10 @@ class HomeController extends Controller
 
     public function add_child(Request $request,$id)
     {
-        $okr = OKR::all();
+        $okrs = OKR::all();
+        $okrs3 = OKR::where('class_number', '3')->get();
 
-        return view('home.add_child',['id'=>$id],['okrs'=>$okr]);
+        return view('home.add_child',compact('okrs','okrs3','id'));
     }
 
     public function add_child_update(ValiDemoRequest $request)
@@ -78,9 +79,10 @@ class HomeController extends Controller
     {
         $okrs = OKR::orderBy('parent_id','asc')->get();
         $okrs2 = OKR::where('class_number', '2')->get();
+        $okrs3 = OKR::where('class_number', '3')->get();
         $user = Auth::user();
         $param = ['user' => $user];
-        return view('home.show',compact('okrs','okrs2','id'));
+        return view('home.show',compact('okrs','okrs2','okrs3','id'));
 
     }
 }
