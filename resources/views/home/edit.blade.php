@@ -18,7 +18,6 @@
     <form action="/Home/{id}/edit" method="post" class="add_infomation" id="edit_infomation">
         {{ csrf_field() }}
         <div>
-            @foreach($okrs as $okr)
             @if($okr->id == $id)
             <input type="text" name="id" style="display:none;" value={{$okr->id}}>
             <h2>OBJECTIVE</h2>
@@ -36,7 +35,6 @@
                 @endif
                 <input type="text" name="key_result" value={{$okr->key_result}}>
             @endif
-            @endforeach
         </div>
         <input type="submit" value="編集完了" class="button edit_button add_okr_btn">
     </form>

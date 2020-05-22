@@ -5,6 +5,14 @@
 
 @section('content')
 <div class="add_wrap">
+@foreach($okrs3 as $okr3)
+    @if($okr3->parent_id == $id)
+    <p>できません</p>
+    @else
+    できまーす
+    @endif
+@endforeach
+
 @foreach($okrs as $okr)
 @if($id==$okr->id)
 <div class="parent_infomation">
@@ -37,7 +45,6 @@
 
         <input type="text" style="display:none;" name="class_number" value={{$okr->class_number + 1}}>
         <input type="text" style="display:none;" name="parent_master_id" value={{$okr->parent_id}}>
-
         <input type="submit" value="追加する" class="button add_button add_okr_btn">
     </form>
 </div>
