@@ -112,13 +112,40 @@ for (var i = 0; i <= leaderline.length - 1; i++) {
 for (var _i = 0; _i <= second_leaderline.length - 1; _i++) {
   second_leaderline[_i].setAttribute("id", sencondend + _i);
 
-  var line2 = new LeaderLine(document.getElementById('end' + _i), document.getElementById('second_end' + _i)); // line2.dash = true ;
+  // var line2 = new LeaderLine(document.getElementById('end' + _i), document.getElementById('second_end' + _i)); // line2.dash = true ;
+
+  // line2.setOptions({
+  //   startSocket: 'bottom',
+  //   endSocket: 'top'
+  // });
+  // line2.color = '#ffa500';
+}
+
+// ３階層目に３つokrが設定されてる場合のみ表示する
+var second_end2 = document.getElementById("second_end2");
+
+if(second_end2!= null) {
+  var line1 = new LeaderLine(document.getElementById('end0'), document.getElementById('second_end0')); // line2.dash = true ;
+  var line2 = new LeaderLine(document.getElementById('end1'), document.getElementById('second_end1')); // line2.dash = true ;
+  var line3 = new LeaderLine(document.getElementById('end2'), document.getElementById('second_end2')); // line2.dash = true ;
+  
+  line1.setOptions({
+    startSocket: 'bottom',
+    endSocket: 'top'
+  });
+  line1.color = '#ffa500';
 
   line2.setOptions({
     startSocket: 'bottom',
     endSocket: 'top'
   });
   line2.color = '#ffa500';
+  
+  line3.setOptions({
+    startSocket: 'bottom',
+    endSocket: 'top'
+  });
+  line3.color = '#ffa500';
 }
 
 /***/ }),
