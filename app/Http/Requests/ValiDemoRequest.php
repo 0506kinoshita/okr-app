@@ -35,7 +35,6 @@ class ValiDemoRequest extends FormRequest
             'objective.max' => '20文字以内で入力してください',
             'key_result.required' => 'KEY_RESULTを入力してください',
             'key_result.max' => '20文字以内で入力してください',
-
         ];
     }
 }
