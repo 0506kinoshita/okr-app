@@ -128,6 +128,14 @@
     font-weight: bold;
     font-size: 24px;
   }
+  textarea{
+      float: right;
+      height:200px;
+      font-size: 130%;
+  }
+.right{
+    float: left;
+}
   .exist_okr > p{
     font-size:24px;
   }
@@ -154,9 +162,6 @@
   }
   
   /* index.blade.php */
-.wrap_index_okr{
-    
-}
   .wrap_index{
     margin:30px 5%;
   }

@@ -13,30 +13,35 @@
         <p class="exist_okr_infomation">{{ $okr->objective }}</p>
         <h2>KEY RESULT</h2>
         <p>{{ $okr->key_result }}</p>
+        <h2>詳細</h2>
+        <p>{{ $okr->detail }}</p>
     </div>
 
     <form action="/Home/{id}/edit" method="post" class="add_infomation" id="edit_infomation">
         {{ csrf_field() }}
-        <div>
-            @if($okr->id == $id)
-            <input type="text" name="id" style="display:none;" value={{$okr->id}}>
-            <h2>OBJECTIVE</h2>
-            <p>*20文字以内</p>
-                @if($errors->has('objective'))
-                    <p>{{ $errors->first('objective') }}</p>
+        <div class="right">
+            <div>
+                @if($okr->id == $id)
+                <input type="text" name="id" style="display:none;" value={{$okr->id}}>
+                <h2>OBJECTIVE</h2>
+                <p>*20文字以内</p>
+                    @if($errors->has('objective'))
+                        <p>{{ $errors->first('objective') }}</p>
+                    @endif
+                <input type="text" name="objective" value={{$okr->objective}}>
+            </div>
+            <div class="add_okr_contents">
+                <h2>KEY RESULT</h2>
+                <p>*20文字以内</p>
+                    @if($errors->has('key_result'))
+                        <p>{{ $errors->first('key_result') }}</p>
+                    @endif
+                    <input type="text" name="key_result" value={{$okr->key_result}}>
                 @endif
-            <input type="text" name="objective" value={{$okr->objective}}>
-        </div>
-        <div class="add_okr_contents">
-            <h2>KEY RESULT</h2>
-            <p>*20文字以内</p>
-                @if($errors->has('key_result'))
-                    <p>{{ $errors->first('key_result') }}</p>
-                @endif
-                <input type="text" name="key_result" value={{$okr->key_result}}>
-            @endif
-        </div>
-        <input type="submit" value="編集完了" class="button edit_button add_okr_btn">
+            </div>
+            <input type="submit" value="編集完了" class="button edit_button add_okr_btn">
+            </div>
+            <textarea name="detail" rows="4" cols="40"></textarea>
     </form>
 </div>
 @endif
