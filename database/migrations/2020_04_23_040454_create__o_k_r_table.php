@@ -17,6 +17,7 @@ class CreateOKRTable extends Migration
             $table->bigIncrements('id');
             $table->string('objective');
             $table->string('key_result');
+            $table->string('detail', 200)->nullable();
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->unsignedBigInteger('class_number');
             $table->unsignedBigInteger('parent_master_id')->nullable();
