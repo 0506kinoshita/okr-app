@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\EloquentModel\OKR;
+use App\EloquentModel\TitleClass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -77,12 +78,14 @@ class HomeController extends Controller
 
     public function show(Request $request,$id)
     {
+        $class = DB::table('class')->get();
+        // $class = TitleClass::all();
         $okrs = OKR::orderBy('parent_id','asc')->get();
         $okrs2 = OKR::where('class_number', '2')->get();
         $okrs3 = OKR::where('class_number', '3')->get();
         $user = Auth::user();
         $param = ['user' => $user];
-        return view('home.show',compact('okrs','okrs2','okrs3','id'));
+        return view('home.show',compact('okrs','okrs2','okrs3','class','id'));
 
     }
 }
