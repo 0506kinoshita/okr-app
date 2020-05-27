@@ -26,6 +26,7 @@ class ValiDemoRequest extends FormRequest
         return [
             'objective' => 'required|max:20',
             'key_result' => 'required|max:20',
+            'detail' => 'max:200',
         ];
     }
 
@@ -35,6 +36,7 @@ class ValiDemoRequest extends FormRequest
             'objective.max' => '20文字以内で入力してください',
             'key_result.required' => 'KEY_RESULTを入力してください',
             'key_result.max' => '20文字以内で入力してください',
+            'detail.max' => '200文字以内で入力してください',
         ];
     }
 }
