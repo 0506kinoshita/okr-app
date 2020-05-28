@@ -13,13 +13,10 @@
         <p class="exist_okr_infomation">{{ $okr->objective }}</p>
         <h2>KEY RESULT</h2>
         <p>{{ $okr->key_result }}</p>
-        <h2>詳細</h2>
-        <p>{{ $okr->detail }}</p>
     </div>
-
     <form action="/Home/{id}/edit" method="post" class="add_infomation" id="edit_infomation">
         {{ csrf_field() }}
-        <div class="right">
+        <div class="detail_wrap">
             <div>
                 @if($okr->id == $id)
                 <input type="text" name="id" style="display:none;" value={{$okr->id}}>
@@ -40,8 +37,15 @@
                 @endif
             </div>
             <input type="submit" value="編集完了" class="button edit_button add_okr_btn">
-            </div>
-            <textarea name="detail" rows="4" cols="40"></textarea>
+        </div>
+        </div>
+        <div class="detail-area">
+            <p>*200文字以内</p>
+            @if($errors->has('detail'))
+                <p>{{ $errors->first('detail') }}</p>
+            @endif
+            <textarea name="detail" rows="18" cols="40" placeholder="詳細">{{$okr->detail}}</textarea>
+        </div>
     </form>
 </div>
 @endif

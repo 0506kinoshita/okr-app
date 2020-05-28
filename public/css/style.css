@@ -39,12 +39,14 @@
     min-height: 36px;
   }
   .top_content{
-    background-color: rgb(220, 80, 80);
+    background:linear-gradient(#f05050,#c85050);
   }
   .second_content{
-    background-color: rgb(220, 130, 80);
+    background:linear-gradient(#fa8250,#e68250);
   }
   .third_content{
+    background:linear-gradient(#f0b432,#c8b432);
+
     background-color: rgb(220, 180, 50);
   }
   .other_than_border_right{
@@ -73,6 +75,9 @@
     border-bottom:solid 5px orange !important;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
   }
+  .wrap-header{
+      margin: 0 5%;
+  }
   .h-index{
     float:left;
   }
@@ -91,7 +96,8 @@
   /* 追加画面--add.blade.php--add_child.blade.php */
   .add_wrap{
     display: flex;
-    margin:20px 10%;
+    justify-content: space-between;
+    margin:20px 5%;
   }
   .add_wrap input[type="text"]{
     border:solid 0px;
@@ -115,23 +121,26 @@
   }
   .exist_okr{
     margin-bottom:100px;
-    padding:12px;
+    padding:0 12px 24px;
   }
   .exist_okr > p:first-child{
     margin:0 0 12px 0;
   }
   .add_infomation{
-    padding:12px;
+    padding:24px 12px;
+    display: flex;
   }
   .exist_okr h2,
   .add_infomation h2{
     font-weight: bold;
     font-size: 24px;
   }
+  .detail-area{
+      /* margin:0 0 0 14%; */
+  }
   textarea{
-      float: right;
-      height:200px;
-      font-size: 130%;
+      font-size: 140%;
+      padding: 8px;
   }
 .right{
     float: left;
@@ -142,7 +151,8 @@
   .exist_okr_infomation{
     margin-bottom:28px;
   }
-  .add_infomation p{
+  .add_infomation p,
+  .detail-area p{
     color:red;
   }
   .add_okr_contents{
@@ -179,7 +189,7 @@
     padding:4px 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12),0 4px 8px rgba(0, 0, 0, 0.24);
     text-align: center;
-    width: 400px;
+    width: 480px;
   }
   .index_list:hover{
     box-shadow: 0 4px 6px rgba(220, 130, 80),0 2px 4px rgba(220, 230, 80);
@@ -208,7 +218,7 @@
     background:linear-gradient(#50a0ff,#503cff);
   }
   .add_okr_btn{
-    margin-top :60px;
+    margin-top: 40px;
     font-size: 20px;
   }
   .add_okr_son{
@@ -266,6 +276,9 @@
     .menu {
         font-size: 16px;
     }
+    .wrap-header{
+        margin: 0;
+    }
   }
   @media screen and (max-width: 959px) {
 
@@ -276,9 +289,11 @@
 
   /* index */
   @media screen and (max-width: 959px) {
-
     .index_okr p{
         font-size:16px;
+    }
+    .index_list{
+        width:400px;
     }
   }
   @media screen and (max-width: 767px){
@@ -290,40 +305,76 @@
     .index_okr{
         margin:0;
     }
-
-  }
-
-  /* add */
-  @media screen and (max-width: 959px) {
     .okr_document {
         display: none;
     }
+    .wrap_index{
+        margin:20px auto;
+    }
+    .wrap_index_okr{
+        width: 100%;
+    }
+  }
+
+  /* add */
+  @media screen and (max-width: 1100px) {
     .add_wrap{
-        margin:20px 0;
+        margin:20px 5%;
+    }
+    textarea{
+        font-size: 120%;
+        width:90%;
+    }
+    .okr_document{
+        margin: 0 0 0 5%;
+    }
+  }
+  @media screen and (max-width: 959px) {
+    .add_wrap{
+        margin:20px 2%;
     }
     .add_infomation{
         margin:0 auto;
 
     }
     .parent_infomation{
-        margin:0 auto;
+        margin:20px auto;
     }
     .add_wrap input[type="text"]{
         border:solid 0px;
         border-bottom:solid 1px;
-        width:400px;
-        height:60px;
+        width:320px;
         font-size: 100%;
     }
+    textarea{
+        font-size: 120%;
+        width:400px;
+    }
   }
-  @media screen and (max-width: 1100px) {
+@media screen and (max-width: 767px){
     .add_wrap{
-        margin:20px 5%;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
     }
-    .okr_document{
-        margin: 0 0 0 5%;
+    .add_wrap input[type="text"]{
+        border:solid 0px;
+        border-bottom:solid 1px;
+        font-size: 100%;
+        height: 36px;
     }
-  }
+    textarea{
+        width:320px;
+        font-size: 100%;
+    }
+    .detail_wrap{
+      margin:0 auto;
+    }
+    .add_infomation p,
+    .detail-area p{
+        font-size:12px;
+    }
+}
   .flash_massage{
       background-color: #ff9fbd;
       color:#ff0000;

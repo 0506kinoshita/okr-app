@@ -8,7 +8,7 @@ use App\Http\Middleware\CheckSecond;
 //     return view('welcome');
 // });
 
-Route::get('/','HomeController@index');
+Route::get('/','HomeController@index')->name('home');;
 Route::get('Home/add','HomeController@add');
 Route::post('Home/add','HomeController@create');
 
@@ -23,7 +23,5 @@ Route::post('Home/{id}/edit','HomeController@update');
 
 Route::get('Home/delete','HomeController@delete');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('hello','HomeController@index')->middleware('auth');
