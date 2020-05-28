@@ -16,6 +16,7 @@
     </div>
     <form action="/Home/{id}/add_child" method="post" class="add_infomation" id="add_infomation">
         {{ csrf_field() }}
+        <div>
             <div>
                 <h2>OBJECTIVE</h2>
                 <p>*20文字以内</p>
@@ -38,7 +39,7 @@
             <input type="text" style="display:none;" name="class_number" value={{$okr->class_number + 1}}>
             <input type="text" style="display:none;" name="parent_master_id" value={{$okr->parent_id}}>
             <input type="submit" value="追加する" class="button add_button add_okr_btn">
-        <!-- ??? -->
+            </div>
         </div>
         <div class="detail-area">
             <p>*200文字以内</p>
