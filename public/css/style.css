@@ -384,3 +384,7 @@
       font-size: 120%;
       font-weight: bold;
   }
+
+  .index_list span{
+      font-weight: bold;
+  }
