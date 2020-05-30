@@ -8,6 +8,9 @@ use App\Http\Middleware\CheckSecond;
 //     return view('welcome');
 // });
 
+// ログインしてない状態で見れる画面
+Route::view('/', 'home/top');
+
 Route::get('/','HomeController@index')->name('home');;
 Route::get('Home/add','HomeController@add');
 Route::post('Home/add','HomeController@create');
