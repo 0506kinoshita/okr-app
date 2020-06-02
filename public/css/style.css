@@ -478,3 +478,8 @@
         margin-top:60px;
     }
 }
+
+/* バリデーション */
+.invalid-feedback{
+    color:red;
+}
