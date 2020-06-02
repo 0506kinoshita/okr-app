@@ -5,7 +5,7 @@
 @section('content')
 <div class="auth_background">
 <div class="auth_wrap">
-    <h1 class="auth_title">LOGIN</h1>
+    <h1 class="auth_title">ログイン</h1>
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
