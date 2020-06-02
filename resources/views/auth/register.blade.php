@@ -6,7 +6,7 @@
 <div class="auth_background">
 
 <div class="auth_wrap">
-    <h1 class="auth_title">REGISTER</h1>
+    <h1 class="auth_title">登録</h1>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
