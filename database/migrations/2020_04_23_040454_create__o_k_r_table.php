@@ -15,6 +15,7 @@ class CreateOKRTable extends Migration
     {
         Schema::create('_o_k_r', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('person_id');
             $table->string('objective');
             $table->string('key_result');
             $table->string('detail', 200)->nullable();

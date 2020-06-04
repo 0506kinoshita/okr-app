@@ -13,10 +13,11 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $okr = OKR::all();
+        $okrs = OKR::all();
         $user = Auth::user();
+        $user_id = Auth::id();
         $param = ['user' => $user];
-        return view('home.index',['okrs'=>$okr]);
+        return view('home.index',compact('okrs','user_id'));
     }
 
     public function add(Request $request)
