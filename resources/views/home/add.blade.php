@@ -27,7 +27,7 @@
 
             <input type="text" style="display:none;" name="class_number" value=1>
             <input type="text" style="display:none;" name="person_id" value={{ $user_id }}>
-            <input type="submit" value="OKRを設定" class="button add_button add_okr_btn">
+            <input type="submit" value="OKRを設定" class="button add_index_button add_okr_btn">
             </div>
         </div>
         <div class="detail-area">
