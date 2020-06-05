@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\EloquentModel;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -36,4 +36,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function OKR(){
+        return $this->hasmany('App\EloquentModel\OKR.php');
+    }
 }

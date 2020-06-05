@@ -14,6 +14,7 @@ class _O_k_r_TableSeeder extends Seeder
     {
         $param=[
             'id' => 1,
+            'person_id' => 1,
             'objective' => '日本一のラーメン屋を作る',
             'key_result' => '売り上げ300%達成',
             'detail' => null,
@@ -28,6 +29,7 @@ class _O_k_r_TableSeeder extends Seeder
 
         $param=[
             'id' => 2,
+            'person_id' => 1,
             'objective' => 'SNSで拡散する',
             'key_result' => '公式アカウントを作りで毎日投稿',
             'detail' => null,
@@ -42,6 +44,7 @@ class _O_k_r_TableSeeder extends Seeder
 
         $param=[
             'id' => 3,
+            'person_id' => 1,
             'objective' => '口コミで拡散する',
             'key_result' => '宣伝',
             'detail' => '年齢層を絞った展開をしていく、主婦層をターゲットにするため、テレビ、雑誌等メディアも活用した戦略をとる',

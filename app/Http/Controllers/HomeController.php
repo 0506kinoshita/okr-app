@@ -13,24 +13,27 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $okr = OKR::all();
+        $okrs = OKR::all();
         $user = Auth::user();
+        $user_id = Auth::id();
         $param = ['user' => $user];
-        return view('home.index',['okrs'=>$okr]);
+        return view('home.index',compact('okrs','user_id'));
     }
 
     public function add(Request $request)
     {
         $id = null;
-        return view('home.add',['id'=>$id]);
+        $user_id = Auth::id();
+        return view('home.add',compact('id','user_id'));
     }
 
     public function add_child(Request $request,$id)
     {
         $okrs = OKR::all();
         $okrs3 = OKR::where('class_number', '3')->get();
+        $user_id = Auth::id();
 
-        return view('home.add_child',compact('okrs','okrs3','id'));
+        return view('home.add_child',compact('okrs','okrs3','id','user_id'));
     }
 
     public function add_child_update(ValiDemoRequest $request)
