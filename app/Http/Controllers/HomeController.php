@@ -46,7 +46,6 @@ class HomeController extends Controller
         return redirect('/');
     }
 
-    // add.blade.php
     public function create(ValiDemoRequest $request)
     {
         $info = new OKR;

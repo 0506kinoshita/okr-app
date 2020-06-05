@@ -233,6 +233,7 @@
   .add_okr_btn{
     margin-top: 40px;
     font-size: 20px;
+    width: 270px;
   }
   .add_okr_son{
     font-size:18px;
@@ -248,7 +249,7 @@
   a.okr_a{
     color:white;
   }
-  
+
   /* showページ */
   @media screen and (max-width: 767px){
     .okr_set{
@@ -269,11 +270,13 @@
     .add_index_button:hover{
         font-size: 20px;
         padding:8px;
-
     }
     .content{
         padding:8px 0px;
         min-height: 36px;
+    }
+    .add_okr_btn{
+        width:auto;
     }
   }
   @media screen and (max-width: 959px) {
