@@ -1,4 +1,3 @@
-<!-- 大もとのOKRから子要素（2階層目）のOKR作成画面 -->
 @extends('home.app')
 
 @include('home.header')
@@ -34,6 +33,7 @@
                 <input type="text" name="key_result">
                 <input type="text" style="display:none;" name="parent_id" value= {{$id}}>
                 <input  type="text" style="display:none;" name="master_flag" value="0">
+                <input  type="text" style="display:none;" name="person_id" value={{$user_id}}>
             </div>
 
             <input type="text" style="display:none;" name="class_number" value={{$okr->class_number + 1}}>
