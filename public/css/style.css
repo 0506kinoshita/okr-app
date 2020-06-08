@@ -244,7 +244,7 @@
     background:linear-gradient(#4355d2,#435564);
     outline: none;
     border-style:none;
-    height :28px;
+    line-height: 20px;
   }
   a.okr_a{
     color:white;
@@ -266,7 +266,7 @@
         font-size: 12px;
     }
     .button{
-        padding:4px 6px;
+        padding:8px;
     }
     .button:hover{
         font-size: 12px;
@@ -414,7 +414,7 @@
       top:50%;
       left:50%;
       transform: translate(-50%, -50%);
-      width:90%;
+      width:400px;
   }
   .auth_title{
     font-size: 32px;
