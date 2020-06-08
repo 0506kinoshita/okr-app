@@ -244,7 +244,7 @@
     background:linear-gradient(#4355d2,#435564);
     outline: none;
     border-style:none;
-    line-height: 20px;
+    height :28px;
   }
   a.okr_a{
     color:white;
@@ -266,7 +266,7 @@
         font-size: 12px;
     }
     .button{
-        padding:8px;
+        padding:4px 6px;
     }
     .button:hover{
         font-size: 12px;
