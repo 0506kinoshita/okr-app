@@ -7,17 +7,16 @@
     <div class="wrap_index_okr">
         <section class="index_okr">
             <h2>登録したOKR一覧</h2>
+            <p id="not_okr"></p>
             @foreach($okrs as $okr)
-            @if( $okr->person_id === $user_id)
-            @if($okr->master_flag == 1)
-                <div class="index_list">
-                    <a href=" {{ action('HomeController@show' , $okr->id )}} ">
-                        <p class="margin_bottom">{{ $okr->objective }}</p>
-                        <p>{{ $okr->key_result }}</p>
-                    </a> 
-                </div>
-            @endif
-            @endif
+                @if($okr->person_id === $user_id && $okr->master_flag == 1)
+                    <div class="index_list" id="index_list">
+                        <a href=" {{ action('HomeController@show' , $okr->id )}} ">
+                            <p class="margin_bottom">{{ $okr->objective }}</p>
+                            <p>{{ $okr->key_result }}</p>
+                        </a> 
+                    </div>
+                @endif
             @endforeach
             <div class="add_okr_btn text_align_center">
                 <a href=" {{ url('/Home/add') }} " class="button add_index_button">新しくOKRを追加</a>
@@ -42,4 +41,13 @@
         </article>
     </section>
 </div>
+
+<script>
+    let not_okr = document.getElementById("not_okr");
+    let index_list = document.getElementById("index_list");
+    if (!(index_list)){
+        not_okr.innerHTML = 'OKRは登録されていません'
+    }
+</script>
+
 @endsection

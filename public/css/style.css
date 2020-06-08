@@ -189,10 +189,9 @@
     margin:30px 5%;
   }
   .index_okr h2{
-    margin:0 0 40px 0;
     font-weight:bold;
     font-size:32px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     width:270px;
   }
   .index_okr p{
@@ -219,6 +218,7 @@
     color: #FFF;
     border-radius: 3px;
     line-height: 20px;
+    border: none;
   }
   .button:hover{
     font-size: 24px;
@@ -248,6 +248,10 @@
   }
   a.okr_a{
     color:white;
+  }
+  #not_okr{
+      font-size:18px;
+      text-align: center;
   }
 
   /* showページ */
