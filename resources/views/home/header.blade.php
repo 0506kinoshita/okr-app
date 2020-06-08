@@ -8,12 +8,14 @@
                 <a href=" {{ url('/') }} ">登録したOKR一覧</a>
             @endunless
         </div>
-        <div class="menu-trigger" href="">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <p class="okrtoha">OKRとは</p>
+        @if(\Request::is('/'))
+                <div class="menu-trigger" href="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="okrtoha" id="okrtoha">OKRとは</p>
+        @endif
 
         <div class="overlay"></div>
         <div class="menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -68,11 +70,16 @@ $('.menu-trigger').on('click',function(){
       $('main').removeClass('open');
       $('nav').removeClass('open');
       $('.overlay').removeClass('open');
+      $('#okrtoha').removeClass('toziru');
+      $('#okrtoha').html('OKRとは');
     } else {
       $(this).addClass('active');
       $('main').addClass('open');
       $('nav').addClass('open');
       $('.overlay').addClass('open');
+      $('#okrtoha').addClass('toziru');
+      $('#okrtoha').html('閉じる');
+
     }
   });
   $('.overlay').on('click',function(){
@@ -80,7 +87,7 @@ $('.menu-trigger').on('click',function(){
       $(this).removeClass('open');
       $('.menu-trigger').removeClass('active');
       $('main').removeClass('open');
-      $('nav').removeClass('open');      
+      $('nav').removeClass('open');
     }
   });
 </script>

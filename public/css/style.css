@@ -189,10 +189,10 @@
     margin:30px 5%;
   }
   .index_okr h2{
-    margin:0 0 40px 0;
     font-weight:bold;
     font-size:32px;
-    text-align: center;
+    margin: 0 auto 20px;
+    width:270px;
   }
   .index_okr p{
     font-size:20px;
@@ -218,6 +218,7 @@
     color: #FFF;
     border-radius: 3px;
     line-height: 20px;
+    border: none;
   }
   .button:hover{
     font-size: 24px;
@@ -248,7 +249,11 @@
   a.okr_a{
     color:white;
   }
-  
+  #not_okr{
+      font-size:18px;
+      text-align: center;
+  }
+
   /* showページ */
   @media screen and (max-width: 767px){
     .okr_set{
@@ -261,7 +266,7 @@
         font-size: 12px;
     }
     .button{
-        padding:4px;
+        padding:8px;
     }
     .button:hover{
         font-size: 12px;
@@ -269,11 +274,13 @@
     .add_index_button:hover{
         font-size: 20px;
         padding:8px;
-
     }
     .content{
         padding:8px 0px;
         min-height: 36px;
+    }
+    .add_okr_btn{
+        width:auto;
     }
   }
   @media screen and (max-width: 959px) {
@@ -569,10 +576,16 @@
       left: 24px;
       font-size: 12px;
       display:none;
+      z-index:20;
   }
   @media screen and (max-width: 767px){
     .okrtoha{
         display: block;
+    }
+    .toziru{
+        position: absolute;
+        top: 40px;
+        left: 30px;
     }
     .menu-trigger {
         display: block;
