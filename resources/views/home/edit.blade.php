@@ -4,20 +4,24 @@
 
 @section('content')
 <div class="add_wrap">
-@foreach($okrs as $okr)
-@if($id==$okr->id)
 <div class="parent_infomation">
-    <div class="exist_okr" id="exist_okr2">
-        <h2>OBJECTIVE</h2>
-        <p class="exist_okr_infomation">{{ $okr->objective }}</p>
-        <h2>KEY RESULT</h2>
-        <p>{{ $okr->key_result }}</p>
-    </div>
+@foreach($okrs as $okr)
+    @if($okr->id == $parent_id)
+        <div class="exist_okr" id="exist_okr2">
+            <h2>OBJECTIVE</h2>
+            <p class="exist_okr_infomation">{{ $okr->objective }}</p>
+            <h2>KEY RESULT</h2>
+            <p>{{ $okr->key_result }}</p>
+        </div>
+    @endif
+@endforeach
+
+@foreach($okrs as $okr)
+@if($okr->id == $id)
     <form action="/Home/{id}/edit" method="post" class="add_infomation" id="edit_infomation">
         {{ csrf_field() }}
         <div class="detail_wrap">
             <div>
-                @if($okr->id == $id)
                 <input type="text" name="id" style="display:none;" value={{$okr->id}}>
                 <h2>OBJECTIVE</h2>
                 <p>*20文字以内</p>
@@ -33,7 +37,6 @@
                         <p>{{ $errors->first('key_result') }}</p>
                     @endif
                     <input type="text" name="key_result" value={{$okr->key_result}}>
-                @endif
             </div>
             <input type="submit" value="編集完了" class="button edit_button add_okr_btn">
         </div>
@@ -46,10 +49,10 @@
             <textarea name="detail" rows="18" cols="40" placeholder="詳細">{{$okr->detail}}</textarea>
         </div>
     </form>
-</div>
 @endif
 @endforeach
 
+</div>
 </div>
 
 <script>
