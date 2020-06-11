@@ -38,7 +38,7 @@
                     @endif
                     <input type="text" name="key_result" value={{$okr->key_result}}>
             </div>
-            <input type="submit" value="編集完了" class="button edit_button add_okr_btn">
+            <input type="submit" value="変更を反映する" class="button edit_button add_okr_btn">
         </div>
         </div>
         <div class="detail-area">
