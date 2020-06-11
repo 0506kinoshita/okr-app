@@ -536,7 +536,7 @@
     transform: translateY(12px) rotate(-45deg);
   }
   .menu-trigger span:nth-of-type(2) {
-    top: -3px;
+    top: -4px;
   }
   .menu-trigger.active span:nth-of-type(2) {
     opacity: 0;
